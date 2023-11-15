@@ -1,8 +1,8 @@
-const head = function(array) {
-  if (array.length === 0) {
-    return undefined;
+const head = function(arr) {
+  if (arr.length === 0) {
+    return "Empty Array";
   } else {
-    return array[0];
+    return arr[0];
   }
 }
 
@@ -20,3 +20,4 @@ const assertEqual = function(actual, expected) {
 
 assertEqual(head([5,6,7]), 5);
 assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
+assertEqual(head([]), "Hello");
