@@ -4,10 +4,7 @@ const head = function(arr) {
   } else {
     return arr[0];
   }
-}
-
-
-
+};
 
 
 const assertEqual = function(actual, expected) {
