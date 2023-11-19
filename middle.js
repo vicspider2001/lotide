@@ -28,12 +28,12 @@ const assertArraysEqual = function(actual, expected) {
 
 const middle = function(arr) { // creates a function called middle that takes one array
   if (!Array.isArray(arr)) {
-    return "This is not an array"; // if input is not an array
+    return "Input is not an array"; // if input is not an array
   } else if (arr.length === 1 || arr.length === 2) {
     return [];  // if input has only one or two elements
   } else {
     if (arr.length % 2 === 0) {
-      return [arr[Math.floor(arr.length / 2) - 1], arr[Math .floor(arr.length / 2)]]; // Updates copy of array with middle elements from an even array length
+      return [arr[Math.floor(arr.length / 2) - 1], arr[Math.floor(arr.length / 2)]]; // Updates copy of array with middle elements from an even array length
        
     } else {
       return [arr[Math.floor(arr.length / 2)]]; // updates copy of array with middle element from an odd array length
@@ -56,4 +56,6 @@ console.log(middle([1, 2, 3, 4, 5]));
 console.log(middle([1, 2, 3, 4, 5, 6]));
 console.log(middle(['a', 'b', 'c']));
 console.log(middle(['a', 'b', 'c', 'e']));
+console.log(middle(1, 2, 3, 4, 5));
+console.log(middle('a', 'd', 'c', 'd', 'e'));
 
