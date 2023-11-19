@@ -4,13 +4,14 @@
 
 const flatten = function(arrays) {
   let flattenedArray = [];
-  if (!Array.isArray(arrays)) {
-    console.log("You do not have an Array to flatten");
-      
-  } else {
-    flattenedArray.push(arrays); // to create a copy of the original array
+  for (let i = 0; i < arrays.length; i++) {
+    if (Array.isArray(arrays[i])) {
+      flattenedArray = flattenedArray.concat(arrays[i]);
+    } else {
+      flattenedArray.push(arrays[i]);
+    }
   }
-  return flattenedArray.flat(Infinity);
+  return flattenedArray;
   
   
 };
@@ -39,7 +40,7 @@ const assertArraysEqual = function(actual, expected) {
 
 
 const checkArray = ([1, 2, [3, 4], 5, [6]]);
-flatten(checkArray);
-assertArraysEqual(checkArray, [1, 2, [3, 4], 5, [6]]);
+const flattenedCheckArray = flatten(checkArray);
+assertArraysEqual(flattenedCheckArray, [1, 2, 3, 4, 5, 6]);
 console.log(flatten([0, 1, [2, [3, [4, 5]]]]));
-console.log(flatten(["Apple", "Orange", "Grapes", ["Mango"], ["1", "2"]]));
+console.log(flatten(["Apple", "Orange", "Grapes", ["Mango", ["1", "2"]]]));
