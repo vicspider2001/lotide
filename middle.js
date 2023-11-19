@@ -32,11 +32,12 @@ const middle = function(arr) { // creates a function called middle that takes on
   } else if (arr.length === 1 || arr.length === 2) {
     return [];  // if input has only one or two elements
   } else {
+    const compute = Math.floor(arr.length / 2);
     if (arr.length % 2 === 0) {
-      return [arr[Math.floor(arr.length / 2) - 1], arr[Math.floor(arr.length / 2)]]; // Updates copy of array with middle elements from an even array length
+      return [arr[compute - 1], arr[Math.floor(arr.length / 2)]]; // Updates copy of array with middle elements from an even array length
        
     } else {
-      return [arr[Math.floor(arr.length / 2)]]; // updates copy of array with middle element from an odd array length
+      return [arr[compute]]; // updates copy of array with middle element from an odd array length
       
     }
     
