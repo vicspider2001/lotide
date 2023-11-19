@@ -35,7 +35,7 @@ const middle = function(arr) { // creates a function called middle that takes on
     if (arr.length % 2 === 0) {
       return [arr[Math.floor(arr.length / 2) - 1], arr[Math .floor(arr.length / 2)]]; // Updates copy of array with middle elements from an even array length
        
-    } else if (arr.length % 2 !== 0) {
+    } else {
       return [arr[Math.floor(arr.length / 2)]]; // updates copy of array with middle element from an odd array length
       
     }
