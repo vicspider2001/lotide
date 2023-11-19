@@ -4,24 +4,6 @@
 // Use assertArrasEqual function to test middle function
 // For arrays with one or two elements, there is no middle. Return an empty array
 
-const middle = function(arr) { // creates a function called middle that takes one array
-  if (!Array.isArray(arr)) {
-    return "This is not an array"; // if input is not an array
-  } else if (arr.length === 1 || arr.length === 2) {
-    return [];  // if input has only one or two elements
-  } else {
-    if (arr.length % 2 === 0) {
-      return [arr[Math.floor(arr.length / 2) - 1], arr[Math .floor(arr.length / 2)]]; // Updates copy of array with middle elements from an even array length
-       
-    } else if (arr.length % 2 !== 0) {
-      return [arr[Math.floor(arr.length / 2)]]; // updates copy of array with middle element from an odd array length
-      
-    }
-    
-  }
-  
-};
-
 const eqArrays = function(array1, array2) {
   if (array1.length !== array2.length) {
     return false;
@@ -43,6 +25,26 @@ const assertArraysEqual = function(actual, expected) {
     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
   }
 };
+
+const middle = function(arr) { // creates a function called middle that takes one array
+  if (!Array.isArray(arr)) {
+    return "This is not an array"; // if input is not an array
+  } else if (arr.length === 1 || arr.length === 2) {
+    return [];  // if input has only one or two elements
+  } else {
+    if (arr.length % 2 === 0) {
+      return [arr[Math.floor(arr.length / 2) - 1], arr[Math .floor(arr.length / 2)]]; // Updates copy of array with middle elements from an even array length
+       
+    } else if (arr.length % 2 !== 0) {
+      return [arr[Math.floor(arr.length / 2)]]; // updates copy of array with middle element from an odd array length
+      
+    }
+    
+  }
+  
+};
+
+
 
 const testArray = [1, 2, 3];
 const testedArray = middle(testArray);
