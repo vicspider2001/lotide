@@ -11,10 +11,10 @@ const assertEqual = function(actual, expected) {
 // function should scan object and return the first key which contains the value
 // function should return undefined if no key is found
 
-const findKeyByValue = function(shows, value) { // function is created
-  const keys = Object.keys(shows); // get Object keys of the object called shows
+const findKeyByValue = function(objects, value) { // function is created
+  const keys = Object.keys(objects); // get Object keys of the object called shows
   for (const key of keys) { // loop through the object keys
-    if (shows[key] === value) { // Condition the scans through the object and returns the first key
+    if (objects[key] === value) { // Condition the scans through the object and returns the first key
       return key;
     }
   }
