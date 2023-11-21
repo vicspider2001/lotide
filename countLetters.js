@@ -25,10 +25,10 @@ const countLetters = function(sentence) {
 
 const result = countLetters("LHL");
 const result2 = countLetters("This is the original");
-const newResult = { l: 2, h: 1 };
+const newResult = { L: 2, H: 1 };
 const newResult2 = {T: 1, h: 2, i: 4, s: 2, t: 1, e: 1, o: 1, r: 1, g: 1, n: 1, a: 1, l: 1};
-assertEqual(result['L'], newResult['l']);
-assertEqual(result['H'], newResult['h']);
+assertEqual(result['L'], newResult['L']);
+assertEqual(result['H'], newResult['H']);
 assertEqual(result2['T'], newResult2['T']);
 assertEqual(result2['h'], newResult2['h']);
 assertEqual(result2['i'], newResult2['i']);
