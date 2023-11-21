@@ -47,13 +47,14 @@ const letterPositions = function(sentence) { // letterPositions function is crea
 // TEST CASES
 const test = letterPositions("lighthouse in the house");
 console.log(test);
-assertArraysEqual([0], [0]);
-assertArraysEqual([ 1, 11 ], [ 1, 11 ],);
-assertArraysEqual([ 3, 5, 15, 18 ], [ 3, 5, 15, 18 ]);
-assertArraysEqual([ 4, 14 ], [ 4, 14 ]);
-assertArraysEqual([ 6, 19 ], [ 6, 19 ]);
-assertArraysEqual([ 7, 20 ], [ 7, 20 ]);
-assertArraysEqual([ 8, 21 ], [ 8, 21 ]);
-assertArraysEqual([ 9, 16, 22 ], [ 9, 16, 22 ]);
-assertArraysEqual([ 12 ], [ 12 ]);
+assertArraysEqual(test['l'], [0]);
+assertArraysEqual(test['i'], [ 1, 11 ],);
+assertArraysEqual(test['g'], [ 2 ]);
+assertArraysEqual(test['h'], [ 3, 5, 15, 18 ]);
+assertArraysEqual(test['t'], [ 4, 14 ]);
+assertArraysEqual(test['o'], [ 6, 19 ]);
+assertArraysEqual(test['u'], [ 7, 20 ]);
+assertArraysEqual(test['s'], [ 8, 21 ]);
+assertArraysEqual(test['e'], [ 9, 16, 22 ]);
+assertArraysEqual(test['n'], [ 12 ]);
 
