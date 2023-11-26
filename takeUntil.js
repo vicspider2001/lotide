@@ -20,6 +20,7 @@ const assertArraysEqual = function(actual, expected) {
   }
 };
 
+// The takeUntil function takes an array and a callback. It returns a new array with elements from the original array up until the callback returns a truthy value.
 const takeUntil = function(array, callback) {
   const result = [];
   for (let item of array) {
