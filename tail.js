@@ -6,21 +6,8 @@ const tail = function(array) {
   }
 };
 
-const equalArray = function(array1, array2) {
-  if (array1.length !== array2.length) {
-    return false;
-  } else {
-    return true;
-  }
-};
+module.exports = tail;
 
-const assertEqual = function(actual, expected) {
-  if (equalArray(actual, expected)) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
 
-assertEqual(tail(["Hello", "Lighthouse", "Labs"]), ["Lighthouse", "Labs"]);
-assertEqual(tail([1,2,3,4,5]), [2,3,4,5]);
+
+
