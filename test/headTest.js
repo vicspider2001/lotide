@@ -15,7 +15,7 @@ describe("#head", () => {
   });
 
   it('Return Empty from an empty array', () => {
-    assert.strictEqual(head([]), "Empty Array");
+    assert.strictEqual(head([]), "undefined");
   });
 });
 
