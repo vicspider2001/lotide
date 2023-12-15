@@ -21,6 +21,8 @@ const assertArraysEqual = function(actual, expected) {
   }
 };
 
+// This function iterates through an array to return the specified callback
+// as an array.
 
 const map = function(array, callback) {
   const results = [];
@@ -32,8 +34,4 @@ const map = function(array, callback) {
   return results;
 
 };
-
-const words = ["ground", "control", "to", "major", "tom"];
-const output = map(words, word => word[0]);
-console.log(output);
-assertArraysEqual(output, ['g', 'c', 't', 'm', 't' ]);
+module.exports = map;
