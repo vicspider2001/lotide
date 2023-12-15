@@ -31,26 +31,19 @@ const eqObjects = function(object1, object2) {
 
   for (let key of obj1) {
     if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
-      eqArrays((eqObjects(object1[key], object2[key])));
       if (!eqArrays(object1[key], object2[key])) {
         return false;
       }
-    }
-    if (object1[key] !== object2[key]) {
+    } else if (typeof object1[key] === 'object' && typeof object2[key] === 'object') {
+      //compare nested objects
+      if (!eqObjects(object1[key], object2[key])) {
+        return false;
+      }
+    } else if (object1[key] !== object2[key]) {
       return false;
     }
-        
   }
   return true;
   
 };
-
-const multiColorShirtObject = { colors: ["red", "blue"], size: "medium" };
-const anotherMultiColorShirtObject = { size: "medium", colors: ["red", "blue"] };
-eqObjects(multiColorShirtObject, anotherMultiColorShirtObject); // => true
-
-const longSleeveMultiColorShirtObject = { size: "medium", colors: ["red", "blue"], sleeveLength: "long" };
-eqObjects(multiColorShirtObject  , longSleeveMultiColorShirtObject); // => false
-
-console.log(eqObjects(multiColorShirtObject, anotherMultiColorShirtObject)); // => true
-console.log(eqObjects(multiColorShirtObject, longSleeveMultiColorShirtObject));
+module.exports = eqObjects;
