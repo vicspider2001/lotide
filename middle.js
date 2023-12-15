@@ -1,4 +1,3 @@
-// create a function called middle
 // middle will take one array
 // middle will return the middle-most element(s) of the array
 // Use assertArrasEqual function to test middle function
@@ -6,7 +5,7 @@
 
 const middle = function(arr) { // creates a function called middle that takes one array
   if (!Array.isArray(arr)) {
-    return "Input is not an array"; // if input is not an array
+    return []; // if input is not an array
   } else if (arr.length === 1 || arr.length === 2) {
     return [];  // if input has only one or two elements
   } else {

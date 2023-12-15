@@ -7,7 +7,7 @@ const assertEqual = function(actual, expected) {
 };
 
 // create a function called findKeyByValue
-// the function should take in a object and a value
+// the function should take in an object and a value
 // function should scan object and return the first key which contains the value
 // function should return undefined if no key is found
 
@@ -21,15 +21,4 @@ const findKeyByValue = function(objects, value) { // function is created
   return undefined;
 };
 
-const movies = {
-  action: "Top Boys",
-  Comedy: "Grace Land",
-  Suspense: " Wonderland"
-};
-console.log(findKeyByValue(movies, 'Top Boys'));
-
-assertEqual(findKeyByValue(movies, "Grace Land"), "Comedy");
-assertEqual(findKeyByValue(movies, "Top Boys"), "action");
-assertEqual(findKeyByValue(movies, "Anaconda"), "action");
-
-
+module.exports = findKeyByValue;

@@ -1,4 +1,4 @@
-//write without function
+//without function will :
 // take in a source and itemToRemove arrays
 // return a new array
 // with only those elements from source array
@@ -39,10 +39,5 @@ const assertArraysEqual = function(actual, expected) {
   }
 };
 
-
-const words = ["hello", "world", "lighthouse"];
-without(words, ["lighthouse"]);
-assertArraysEqual(words, ["hello", "world", "lighthouse"]);
-assertArraysEqual(without([1, 2, 3], [1]), [2, 3]); 
-assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]);
+module.exports = without;
 

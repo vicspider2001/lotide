@@ -1,3 +1,4 @@
+//Needed to test Lotide tail.js which returns the tail elements of an array
 const assert = require('chai').assert;
 const tail = require('../tail');
 

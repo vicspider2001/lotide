@@ -1,3 +1,4 @@
+//Needed to test Lotide Head which returns the first element of an array
 const assert = require('chai').assert;
 const head   = require('../head');
 

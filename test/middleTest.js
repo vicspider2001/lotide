@@ -1,3 +1,4 @@
+//Needed to test Lotide middle.js which returns the middle element of an array
 const assert = require('chai').assert;
 const middle = require('../middle');
 

@@ -43,18 +43,4 @@ const letterPositions = function(sentence) { // letterPositions function is crea
   }
   return results;
 };
-
-// TEST CASES
-const test = letterPositions("lighthouse in the house");
-console.log(test);
-assertArraysEqual(test['l'], [0]);
-assertArraysEqual(test['i'], [ 1, 11 ],);
-assertArraysEqual(test['g'], [ 2 ]);
-assertArraysEqual(test['h'], [ 3, 5, 15, 18 ]);
-assertArraysEqual(test['t'], [ 4, 14 ]);
-assertArraysEqual(test['o'], [ 6, 19 ]);
-assertArraysEqual(test['u'], [ 7, 20 ]);
-assertArraysEqual(test['s'], [ 8, 21 ]);
-assertArraysEqual(test['e'], [ 9, 16, 22 ]);
-assertArraysEqual(test['n'], [ 12 ]);
-
+module.exports = letterPositions;

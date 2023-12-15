@@ -1,6 +1,8 @@
+// This function returns the first element of an array.
+
 const head = function(arr) {
   if (arr.length === 0) {
-    return "Empty Array";
+    return "undefined";
   } else {
     return arr[0];
   }
